@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{8334ad18-c530-4b9b-bb3f-e9de16b0b4b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Detour">
+      <UniqueIdentifier>{eab5eb37-5284-4815-8968-c7dc67b7093c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook">
+      <UniqueIdentifier>{dc1d8291-60fb-4fcd-93b4-225c031a37e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{6b3fc1f8-5406-430d-a899-25fab3151501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw">
+      <UniqueIdentifier>{cd39c7ea-34a1-4ccf-8ae1-be94ec6d878f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D3D11">
+      <UniqueIdentifier>{df309337-ab10-46ad-b29e-3e117ab4946f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AimBot">
+      <UniqueIdentifier>{fca7b7a0-0ca3-4fed-8460-153f1c9b4d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Colour">
+      <UniqueIdentifier>{6dc5cbb5-719c-4aca-9864-999ad5bf26bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Options">
+      <UniqueIdentifier>{b9b1796a-1cf3-4486-b066-9a36a134cb2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{106ea389-65b0-4066-850e-d71c687f6eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\SDK">
+      <UniqueIdentifier>{a098f245-e418-4d7b-8f9f-2a64ec83f313}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imconfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imgui.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imgui_impl_dx9.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imgui_impl_dx11.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imgui_impl_win32.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imgui_internal.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imstb_rectpack.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imstb_textedit.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgui\imstb_truetype.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Detours\include\detours.h">
+      <Filter>Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="Detours\include\detver.h">
+      <Filter>Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicStructs.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw.h">
+      <Filter>Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11.h">
+      <Filter>D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="AimBot.h">
+      <Filter>AimBot</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ActorLayerUtilities.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ActorSequence.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AdvancedSessions.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AdvancedSteamSessions.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AIModule.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AMRagdoll.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AnimationCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AnimationSharing.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AnimGraphRuntime.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ApexDestruction.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AssetRegistry.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AssetTags.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AudioAnalyzer.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AudioCapture.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AudioExtensions.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AudioPlatformConfiguration.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AudioSynesthesia.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AugmentedReality.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\AutomationUtils.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\BasicType.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\BuildPatchServices.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CableComponent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Chaos.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ChaosCloth.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ChaosNiagara.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ChaosSolverEngine.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CinematicCamera.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeCommon.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeInterface.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeNv.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CommonInput.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CommonUI.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CoreUObject.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CustomAnimNode.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CustomMeshComponent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\DatasmithContent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Debug.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\DeveloperSettings.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\DLSS.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\DLSSBlueprint.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\DynamicCoverSystem.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EditableMesh.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EngineDamageTypes.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EngineMessages.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EngineSettings.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EngineSky.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\EyeTracker.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FacialAnimation.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FieldSystemEngine.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FMODStudio.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Foliage.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FriendsList_Wrapper.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FSR2TemporalUpscaling.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GameplayCameras.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GameplayTags.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GameplayTasks.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Gauntlet.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GeometryCache.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GeometryCacheTracks.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GeometryCollectionEngine.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GeometryCollectionTracks.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\HairStrandsCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\HeadMountedDisplay.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ImageWrapper.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ImageWriteQueue.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ImgMedia.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ImgMediaEngine.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ImgMediaFactory.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\InputCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\InputRemapping.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\InteractiveToolsFramework.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\JsonUtilities.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Landscape.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LevelSequence.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LightPropagationVolumeRuntime.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLink.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLinkComponents.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLinkInterface.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLinkMessageBusFramework.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLinkMovieScene.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LiveLinkMvnPlugin.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\LuminRuntimeSettings.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeap.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapAR.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapARPin.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapARPinInfoActor.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapAudio.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapController.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapEyeTracker.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapHandMeshing.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapHandTracking.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapIdentity.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapImageTracker.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapLightEstimation.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapPlanes.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapPrivileges.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapSecureStorage.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MagicLeapSharedWorld.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MaterialShaderQualitySettings.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MediaAssets.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MediaCompositing.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MediaUtils.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\merged_Blueprints_ReadyOrNot_ThirdParty.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MeshDescription.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MeshModelingTools.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ModelingComponents.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ModelingOperators.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Modio.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ModioEx.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ModioUI.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ModioUICore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MotoSynth.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MoviePlayer.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineRenderPasses.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineSettings.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MovieSceneCapture.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MRMesh.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\MSDFSupport.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\NavigationSystem.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\NetCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Niagara.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\NiagaraAnimNotifies.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\NiagaraCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\NiagaraShader.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ObjectPooler.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\OnlineSubsystem.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\OnlineSubsystemSteam.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\OnlineSubsystemUtils.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\OodleNetworkHandlerComponent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\OpenColorIO.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Overlay.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\PacketHandler.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Paper2D.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\PhysicsCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\PhysXVehicles.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ProceduralMeshComponent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\PropertyAccess.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\PropertyPath.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Reflex.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Renderer.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SequencerScripting.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Serialization.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SessionMessages.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SignificanceManager.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SkinnedDecalComponent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Slate.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SlateCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SoundFields.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SoundUtilities.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SoundVisualizations.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\StaticMeshDescription.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\StatsIntegration.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SteamSockets.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SteamVR.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\SteamVRInputDevice.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Synthesis.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\TakeMovieScene.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\TcpMessaging.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\TemplateSequence.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Text2LipSync.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\TimeManagement.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\UdpMessaging.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\UI.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\VariantManagerContent.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\VectorVM.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\VICODynamicsPlugin.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\VictoryBPLibrary.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\VivoxCore.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\WidgetCarousel.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\WinDualSense.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\ZeuzModule.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\Zeuzsdk.h">
+      <Filter>SDK\SDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_demo.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_draw.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_impl_dx9.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_impl_dx11.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_impl_win32.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_tables.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui_widgets.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw.cpp">
+      <Filter>Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11.cpp">
+      <Filter>D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="AimBot.cpp">
+      <Filter>AimBot</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicStructs.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Detours\lib\x64\detours.lib">
+      <Filter>Detour</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Detours\lib\x64\detours.pdb">
+      <Filter>Detour</Filter>
+    </None>
+  </ItemGroup>
+</Project>

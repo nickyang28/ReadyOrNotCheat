@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b875bcc2-e433-4e6b-a9f4-674f8100b236}</ProjectGuid>
+    <RootNamespace>d3dII</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>d3dll</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(DXSDK_DIR)Lib\$(PlatformTarget);$(ProjectDir)Detours\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(DXSDK_DIR)Lib\$(PlatformTarget);$(ProjectDir)Detours\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(DXSDK_DIR)Lib\$(PlatformTarget);$(ProjectDir)Detours\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(DXSDK_DIR)Lib\$(PlatformTarget);$(ProjectDir)Detours\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;D3DII_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;D3DII_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;D3DII_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;D3DII_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AimBot.h" />
+    <ClInclude Include="BasicStructs.h" />
+    <ClInclude Include="D3D11.h" />
+    <ClInclude Include="Detours\include\detours.h" />
+    <ClInclude Include="Detours\include\detver.h" />
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="Draw.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="Imgui\imconfig.h" />
+    <ClInclude Include="Imgui\imgui.h" />
+    <ClInclude Include="Imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="Imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Imgui\imgui_internal.h" />
+    <ClInclude Include="Imgui\imstb_rectpack.h" />
+    <ClInclude Include="Imgui\imstb_textedit.h" />
+    <ClInclude Include="Imgui\imstb_truetype.h" />
+    <ClInclude Include="SDK\SDK.h" />
+    <ClInclude Include="SDK\SDK\ActorLayerUtilities.h" />
+    <ClInclude Include="SDK\SDK\ActorSequence.h" />
+    <ClInclude Include="SDK\SDK\AdvancedSessions.h" />
+    <ClInclude Include="SDK\SDK\AdvancedSteamSessions.h" />
+    <ClInclude Include="SDK\SDK\AIModule.h" />
+    <ClInclude Include="SDK\SDK\AMRagdoll.h" />
+    <ClInclude Include="SDK\SDK\AnimationCore.h" />
+    <ClInclude Include="SDK\SDK\AnimationSharing.h" />
+    <ClInclude Include="SDK\SDK\AnimGraphRuntime.h" />
+    <ClInclude Include="SDK\SDK\ApexDestruction.h" />
+    <ClInclude Include="SDK\SDK\AssetRegistry.h" />
+    <ClInclude Include="SDK\SDK\AssetTags.h" />
+    <ClInclude Include="SDK\SDK\AudioAnalyzer.h" />
+    <ClInclude Include="SDK\SDK\AudioCapture.h" />
+    <ClInclude Include="SDK\SDK\AudioExtensions.h" />
+    <ClInclude Include="SDK\SDK\AudioPlatformConfiguration.h" />
+    <ClInclude Include="SDK\SDK\AudioSynesthesia.h" />
+    <ClInclude Include="SDK\SDK\AugmentedReality.h" />
+    <ClInclude Include="SDK\SDK\AutomationUtils.h" />
+    <ClInclude Include="SDK\SDK\BasicType.h" />
+    <ClInclude Include="SDK\SDK\BuildPatchServices.h" />
+    <ClInclude Include="SDK\SDK\CableComponent.h" />
+    <ClInclude Include="SDK\SDK\Chaos.h" />
+    <ClInclude Include="SDK\SDK\ChaosCloth.h" />
+    <ClInclude Include="SDK\SDK\ChaosNiagara.h" />
+    <ClInclude Include="SDK\SDK\ChaosSolverEngine.h" />
+    <ClInclude Include="SDK\SDK\CinematicCamera.h" />
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeCommon.h" />
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeInterface.h" />
+    <ClInclude Include="SDK\SDK\ClothingSystemRuntimeNv.h" />
+    <ClInclude Include="SDK\SDK\CommonInput.h" />
+    <ClInclude Include="SDK\SDK\CommonUI.h" />
+    <ClInclude Include="SDK\SDK\CoreUObject.h" />
+    <ClInclude Include="SDK\SDK\CustomAnimNode.h" />
+    <ClInclude Include="SDK\SDK\CustomMeshComponent.h" />
+    <ClInclude Include="SDK\SDK\DatasmithContent.h" />
+    <ClInclude Include="SDK\SDK\Debug.h" />
+    <ClInclude Include="SDK\SDK\DeveloperSettings.h" />
+    <ClInclude Include="SDK\SDK\DLSS.h" />
+    <ClInclude Include="SDK\SDK\DLSSBlueprint.h" />
+    <ClInclude Include="SDK\SDK\DynamicCoverSystem.h" />
+    <ClInclude Include="SDK\SDK\EditableMesh.h" />
+    <ClInclude Include="SDK\SDK\EngineDamageTypes.h" />
+    <ClInclude Include="SDK\SDK\EngineMessages.h" />
+    <ClInclude Include="SDK\SDK\EngineSettings.h" />
+    <ClInclude Include="SDK\SDK\EngineSky.h" />
+    <ClInclude Include="SDK\SDK\EyeTracker.h" />
+    <ClInclude Include="SDK\SDK\FacialAnimation.h" />
+    <ClInclude Include="SDK\SDK\FieldSystemEngine.h" />
+    <ClInclude Include="SDK\SDK\FMODStudio.h" />
+    <ClInclude Include="SDK\SDK\Foliage.h" />
+    <ClInclude Include="SDK\SDK\FriendsList_Wrapper.h" />
+    <ClInclude Include="SDK\SDK\FSR2TemporalUpscaling.h" />
+    <ClInclude Include="SDK\SDK\GameplayCameras.h" />
+    <ClInclude Include="SDK\SDK\GameplayTags.h" />
+    <ClInclude Include="SDK\SDK\GameplayTasks.h" />
+    <ClInclude Include="SDK\SDK\Gauntlet.h" />
+    <ClInclude Include="SDK\SDK\GeometryCache.h" />
+    <ClInclude Include="SDK\SDK\GeometryCacheTracks.h" />
+    <ClInclude Include="SDK\SDK\GeometryCollectionEngine.h" />
+    <ClInclude Include="SDK\SDK\GeometryCollectionTracks.h" />
+    <ClInclude Include="SDK\SDK\HairStrandsCore.h" />
+    <ClInclude Include="SDK\SDK\HeadMountedDisplay.h" />
+    <ClInclude Include="SDK\SDK\ImageWrapper.h" />
+    <ClInclude Include="SDK\SDK\ImageWriteQueue.h" />
+    <ClInclude Include="SDK\SDK\ImgMedia.h" />
+    <ClInclude Include="SDK\SDK\ImgMediaEngine.h" />
+    <ClInclude Include="SDK\SDK\ImgMediaFactory.h" />
+    <ClInclude Include="SDK\SDK\InputCore.h" />
+    <ClInclude Include="SDK\SDK\InputRemapping.h" />
+    <ClInclude Include="SDK\SDK\InteractiveToolsFramework.h" />
+    <ClInclude Include="SDK\SDK\JsonUtilities.h" />
+    <ClInclude Include="SDK\SDK\Landscape.h" />
+    <ClInclude Include="SDK\SDK\LevelSequence.h" />
+    <ClInclude Include="SDK\SDK\LightPropagationVolumeRuntime.h" />
+    <ClInclude Include="SDK\SDK\LiveLink.h" />
+    <ClInclude Include="SDK\SDK\LiveLinkComponents.h" />
+    <ClInclude Include="SDK\SDK\LiveLinkInterface.h" />
+    <ClInclude Include="SDK\SDK\LiveLinkMessageBusFramework.h" />
+    <ClInclude Include="SDK\SDK\LiveLinkMovieScene.h" />
+    <ClInclude Include="SDK\SDK\LiveLinkMvnPlugin.h" />
+    <ClInclude Include="SDK\SDK\LuminRuntimeSettings.h" />
+    <ClInclude Include="SDK\SDK\MagicLeap.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapAR.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapARPin.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapARPinInfoActor.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapAudio.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapController.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapEyeTracker.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapHandMeshing.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapHandTracking.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapIdentity.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapImageTracker.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapLightEstimation.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapPlanes.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapPrivileges.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapSecureStorage.h" />
+    <ClInclude Include="SDK\SDK\MagicLeapSharedWorld.h" />
+    <ClInclude Include="SDK\SDK\MaterialShaderQualitySettings.h" />
+    <ClInclude Include="SDK\SDK\MediaAssets.h" />
+    <ClInclude Include="SDK\SDK\MediaCompositing.h" />
+    <ClInclude Include="SDK\SDK\MediaUtils.h" />
+    <ClInclude Include="SDK\SDK\merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h" />
+    <ClInclude Include="SDK\SDK\merged_Blueprints_ReadyOrNot_ThirdParty.h" />
+    <ClInclude Include="SDK\SDK\MeshDescription.h" />
+    <ClInclude Include="SDK\SDK\MeshModelingTools.h" />
+    <ClInclude Include="SDK\SDK\ModelingComponents.h" />
+    <ClInclude Include="SDK\SDK\ModelingOperators.h" />
+    <ClInclude Include="SDK\SDK\Modio.h" />
+    <ClInclude Include="SDK\SDK\ModioEx.h" />
+    <ClInclude Include="SDK\SDK\ModioUI.h" />
+    <ClInclude Include="SDK\SDK\ModioUICore.h" />
+    <ClInclude Include="SDK\SDK\MotoSynth.h" />
+    <ClInclude Include="SDK\SDK\MoviePlayer.h" />
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineCore.h" />
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineRenderPasses.h" />
+    <ClInclude Include="SDK\SDK\MovieRenderPipelineSettings.h" />
+    <ClInclude Include="SDK\SDK\MovieSceneCapture.h" />
+    <ClInclude Include="SDK\SDK\MRMesh.h" />
+    <ClInclude Include="SDK\SDK\MSDFSupport.h" />
+    <ClInclude Include="SDK\SDK\NavigationSystem.h" />
+    <ClInclude Include="SDK\SDK\NetCore.h" />
+    <ClInclude Include="SDK\SDK\Niagara.h" />
+    <ClInclude Include="SDK\SDK\NiagaraAnimNotifies.h" />
+    <ClInclude Include="SDK\SDK\NiagaraCore.h" />
+    <ClInclude Include="SDK\SDK\NiagaraShader.h" />
+    <ClInclude Include="SDK\SDK\ObjectPooler.h" />
+    <ClInclude Include="SDK\SDK\OnlineSubsystem.h" />
+    <ClInclude Include="SDK\SDK\OnlineSubsystemSteam.h" />
+    <ClInclude Include="SDK\SDK\OnlineSubsystemUtils.h" />
+    <ClInclude Include="SDK\SDK\OodleNetworkHandlerComponent.h" />
+    <ClInclude Include="SDK\SDK\OpenColorIO.h" />
+    <ClInclude Include="SDK\SDK\Overlay.h" />
+    <ClInclude Include="SDK\SDK\PacketHandler.h" />
+    <ClInclude Include="SDK\SDK\Paper2D.h" />
+    <ClInclude Include="SDK\SDK\PhysicsCore.h" />
+    <ClInclude Include="SDK\SDK\PhysXVehicles.h" />
+    <ClInclude Include="SDK\SDK\ProceduralMeshComponent.h" />
+    <ClInclude Include="SDK\SDK\PropertyAccess.h" />
+    <ClInclude Include="SDK\SDK\PropertyPath.h" />
+    <ClInclude Include="SDK\SDK\Reflex.h" />
+    <ClInclude Include="SDK\SDK\Renderer.h" />
+    <ClInclude Include="SDK\SDK\SequencerScripting.h" />
+    <ClInclude Include="SDK\SDK\Serialization.h" />
+    <ClInclude Include="SDK\SDK\SessionMessages.h" />
+    <ClInclude Include="SDK\SDK\SignificanceManager.h" />
+    <ClInclude Include="SDK\SDK\SkinnedDecalComponent.h" />
+    <ClInclude Include="SDK\SDK\Slate.h" />
+    <ClInclude Include="SDK\SDK\SlateCore.h" />
+    <ClInclude Include="SDK\SDK\SoundFields.h" />
+    <ClInclude Include="SDK\SDK\SoundUtilities.h" />
+    <ClInclude Include="SDK\SDK\SoundVisualizations.h" />
+    <ClInclude Include="SDK\SDK\StaticMeshDescription.h" />
+    <ClInclude Include="SDK\SDK\StatsIntegration.h" />
+    <ClInclude Include="SDK\SDK\SteamSockets.h" />
+    <ClInclude Include="SDK\SDK\SteamVR.h" />
+    <ClInclude Include="SDK\SDK\SteamVRInputDevice.h" />
+    <ClInclude Include="SDK\SDK\Synthesis.h" />
+    <ClInclude Include="SDK\SDK\TakeMovieScene.h" />
+    <ClInclude Include="SDK\SDK\TcpMessaging.h" />
+    <ClInclude Include="SDK\SDK\TemplateSequence.h" />
+    <ClInclude Include="SDK\SDK\Text2LipSync.h" />
+    <ClInclude Include="SDK\SDK\TimeManagement.h" />
+    <ClInclude Include="SDK\SDK\UdpMessaging.h" />
+    <ClInclude Include="SDK\SDK\UI.h" />
+    <ClInclude Include="SDK\SDK\VariantManagerContent.h" />
+    <ClInclude Include="SDK\SDK\VectorVM.h" />
+    <ClInclude Include="SDK\SDK\VICODynamicsPlugin.h" />
+    <ClInclude Include="SDK\SDK\VictoryBPLibrary.h" />
+    <ClInclude Include="SDK\SDK\VivoxCore.h" />
+    <ClInclude Include="SDK\SDK\WidgetCarousel.h" />
+    <ClInclude Include="SDK\SDK\WinDualSense.h" />
+    <ClInclude Include="SDK\SDK\ZeuzModule.h" />
+    <ClInclude Include="SDK\SDK\Zeuzsdk.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AimBot.cpp" />
+    <ClCompile Include="BasicStructs.cpp" />
+    <ClCompile Include="D3D11.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Draw.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="Imgui\imgui.cpp" />
+    <ClCompile Include="Imgui\imgui_demo.cpp" />
+    <ClCompile Include="Imgui\imgui_draw.cpp" />
+    <ClCompile Include="Imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Imgui\imgui_tables.cpp" />
+    <ClCompile Include="Imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Detours\lib\x64\detours.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Detours\lib\x64\detours.pdb" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
