@@ -93,4 +93,4 @@ The game, by defualt, will not display a reticle on screen. This can help you ai
 
  ## TODO
  - Finish the user inference 
- - Develop a driver to inject the `.dll` 
+ - Develop a driver to inject the `.dll` on Ring 0 level.
